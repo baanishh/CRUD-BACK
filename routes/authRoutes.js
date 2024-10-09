@@ -5,9 +5,9 @@ const { registerUser, loginUser, logoutUser } = require('../controllers/authCont
 const { getProfile } = require('../controllers/authController');
 const { protect } = require('../middleware/authMiddleware');
 
-router.post('/register', registerUser);
+router.post('/register',registerUser);
 router.post('/login', loginUser);
 router.post('/logout', logoutUser);
-router.get('/profile', protect, getProfile);
+router.get('/profile',protect,  getProfile);
 
 module.exports = router;
