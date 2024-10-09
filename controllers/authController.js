@@ -40,39 +40,9 @@ exports.registerUser = async (req, res) => {
     }
 };
 
+
+
 // Login User
-// exports.loginUser = async (req, res) => {
-//     const { username, password } = req.body;
-
-//     try {
-//         const user = await User.findOne({ username });
-//         if (!user) {
-//             return res.status(400).json({ message: 'Invalid credentials' });
-//         }
-
-//         const isMatch = await user.matchPassword(password);
-//         if (!isMatch) {
-//             return res.status(400).json({ message: 'Invalid credentials' });
-//         }
-
-//         const token = generateToken(user._id);
-
-//         res.cookie('token', token, { httpOnly: true });
-
-//         res.status(200).json({
-//             message: 'Logged in successfully',
-//             user: { id: user._id, username: user.username },
-//         });
-//     } catch (error) {
-//         res.status(500).json({ message: 'Server Error' });
-//     }
-// };
-
-
-
-
-
-
 exports.loginUser = async (req, res) => {
     const { username, password } = req.body;
 
@@ -112,14 +82,6 @@ exports.logoutUser = (req, res) => {
 };
 
 
-// Add this function
-// exports.getProfile = async (req, res) => {
-//     try {
-//         res.status(200).json({ user: req.user });
-//     } catch (error) {
-//         res.status(500).json({ message: 'Server Error' });
-//     }
-// };
 
 
 // Get Profile Controller

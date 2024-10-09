@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "crud-front-iota.vercel.app",
   credentials: true, // Allow cookies to be sent with requests
 }));
 
